@@ -39,6 +39,19 @@ public class l001 {
     public static int factorial(int n) {
         return n == 0 ? 1 : factorial(n - 1) * n;
     }
+ //gfg factorial
+	
+   class Solution{
+    static long factorial(int N){
+        // code here
+        if(N<=1) return 1;
+        
+        long resAns = factorial(N-1);
+        Long res = N*resAns;
+        
+        return res;
+    }
+}	
 
     public static int power(int a, int b) {
         return b == 0 ? 1 : power(a, b - 1) * a;
