@@ -178,7 +178,39 @@ public class l001 {
 
     // ------------------------------ Keypad Combinations ------------------------------
 
-//  ----------top to bottom appraoch----------
+  //----------bottom to top ----------
+  //ref - sumit sir video (https://www.youtube.com/watch?v=3fjt19bjs3A&t=655s&ab_channel=Pepcoding)
+  //making answers on the way
+  - qsf, asf -> 
+	
+public class printKpc {
+    public static void main(String[] args) {
+        String ques = "234";
+        printKpc(ques, "");
+    }
+    public static void printKpc(String ques, String ans) {
+        String[] codes = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        
+        // Base case
+        if (ques.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+        // Recursive call
+        char ch = ques.charAt(0);  
+        String roq = ques.substring(1);
+        
+        String codeforch = codes[ch - '0']; 
+        
+        // Traverse and add char
+        for (int i = 0; i < codeforch.length(); i++) {
+            char cho = codeforch.charAt(i);
+            printKpc(roq, ans + cho);
+        }
+    }
+}
+	
+/----Rajneesh-----
   
     static String[] codes = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz", "+-*", "/%^" };
 
@@ -203,65 +235,38 @@ public class l001 {
 
         return myAns;
     }
-
-    public static int getKPC(String str, int idx, String ans) {
-        if (idx == str.length()) {
-            System.out.println(ans);
-            return 1;
+//----leetcode-----
+class Solution {
+    String[] key = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    public List<String> letterCombinations(String digits) {
+        if(digits.length()==0) return new ArrayList<>();
+        List<String> res = CombinationsHelper(digits);
+        return res;
+    }
+    //578
+    public List<String> CombinationsHelper(String ques){
+        if(ques.length()==0){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
         }
 
-        int count = 0;
-        String code = codes[str.charAt(idx) - '0'];
-        for (int i = 0; i < code.length(); i++) {
-            count += getKPC(str, idx + 1, ans + code.charAt(i));
-        }
+        char ch = ques.charAt(0); //5
+        String ros = ques.substring(1);  // 78
 
-        if (idx < str.length() - 1) {
-            int num = (str.charAt(idx) - '0') * 10 + (str.charAt(idx + 1) - '0');
-            if (num == 10 || num == 11) {
-                code = codes[num];
-                for (int i = 0; i < code.length(); i++) {
-                    count += getKPC(str, idx + 2, ans + code.charAt(i));
-                }
+        List<String> rres = CombinationsHelper(ros); //recursion result 
+        List<String> myres = new ArrayList<>();
+        
+        String codeCh = key[ch-'0'];
+        for(int i=0; i<codeCh.length(); i++){
+            char temp = codeCh.charAt(i);
+            for(String num: rres){ // ["ab", "bc"]
+                myres.add(temp+num);
             }
         }
-        return count;
+        return myres;
     }
-
-  //----------bottom to top ----------
-  //making answers on the way
-  - qsf, asf -> 
-https://www.youtube.com/watch?v=3fjt19bjs3A&t=655s&ab_channel=Pepcoding
-  
-public class printKpc {
-    public static void main(String[] args) {
-        String ques = "234";
-        printKpc(ques, "");
-    }
-
-    public static void printKpc(String ques, String ans) {
-        String[] codes = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        
-        // Base case
-        if (ques.length() == 0) {
-            System.out.println(ans);
-            return;
-        }
-        
-        // Recursive call
-        char ch = ques.charAt(0);  
-        String roq = ques.substring(1);
-        
-        String codeforch = codes[ch - '0']; 
-        
-        // Traverse and add char
-        for (int i = 0; i < codeforch.length(); i++) {
-            char cho = codeforch.charAt(i);
-            printKpc(roq, ans + cho);
-        }
-    }
-}
-
+} 	
 
     // ------------------------------ Decode Ways ------------------------------
 
