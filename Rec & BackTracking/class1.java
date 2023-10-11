@@ -141,10 +141,9 @@ public class l001 {
         ArrayList<String> myAns = new ArrayList<>();
 
         for (String s : smallAns) {
-            myAns.add(s);
-            myAns.add(ch + s);
+            myAns.add(s); //not add the current element 
+            myAns.add(ch + s);  //add the current element	
         }
-
         return myAns;
     }
 
