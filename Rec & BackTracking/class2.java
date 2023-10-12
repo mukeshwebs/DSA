@@ -45,6 +45,11 @@ public class l002 {
 
     // ------------------------------ Flood Fill ------------------------------
 
++----------------------+
+   Direction Array       
++----------------------+
+
+
     public static int floodFill(int sr, int sc, int er, int ec, boolean[][] vis, int[][] dir, String[] dirS,
             String ans) {
         if (sr == er && sc == ec) {
@@ -71,6 +76,9 @@ public class l002 {
         return count;
     }
  // ------------------------------ Flood Fill with jumps ------------------------------
++---------------------------------+
+Direction Array + Radius Concept     
++---------------------------------+
     public static int floodFillJump(int sr, int sc, int er, ec, boolean[][] vis, int[][] dir, String[] dirS,
             String ans) {
         if (sr == er && sc == ec) {
