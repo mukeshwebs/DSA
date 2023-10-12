@@ -127,6 +127,11 @@ public class l001 {
     // ------------------------------ String Operations ------------------------------
 
   //----------top to bottom appraoch----------
+ //first we will make recursive call till the stack get's full and when base case break we return base.add(""); an empty list
+ after that line below recursive call will make the answer. 
+ The trick is when base case breaks the last ch will be the last element in string, let's say String is s = "abac"
+ so ch = c when base case break and it will combine as a include and not include c so list will have [c, " "]
+ in next iteration a will combine with all [c, " "] -> ["ac", "c",  "a", " "] similarly it will got for each iteration.
 
     public static ArrayList<String> subsequence(String str, int idx) {
         if (idx == str.length()) {
