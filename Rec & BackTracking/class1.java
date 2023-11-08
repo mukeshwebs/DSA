@@ -87,7 +87,17 @@ public class l001 {
             return -(int) 1e9;
         return Math.max(arr[idx], maximumEle(arr, idx + 1));
     }
-
+`````````````````````````````````````````````````
+    public static int maxEle(int []arr, int idx){
+       int max = Integer.MIN_VALUE;
+       int res = 0;
+        if(idx==arr.length) {
+            return max;
+        }
+        max = maxEle(arr, idx+1);
+        return Math.max(max, arr[idx]);
+    }
+`````````````````````````````````````````````````
     public static int minimumEle(int[] arr, int idx) {
         if (idx == arr.length)
             return (int) 1e9;
