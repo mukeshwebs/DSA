@@ -1,13 +1,12 @@
-![image](https://github.com/mukeshwebs/DSA/assets/53649320/8b3ecffe-35d4-4a8f-b668-437f69422fc2)#1
+## Fibonacci
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/09633c88-e81a-4144-b382-9666efa8f6fe)
 
-#2
+## Maze Path
+### Single Jump + Multiple Jumps
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/86c0841c-9c9f-43d5-b569-b0747276c901)
 
-#3
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/10af0cbc-226e-4fbd-be3f-e420963120da)
 
-#4
 ## Climbing Stairs
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/3f2e2cc3-1cc5-473e-92b8-13c87e884bf2)
 
