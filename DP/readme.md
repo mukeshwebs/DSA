@@ -9,6 +9,8 @@
 
 #4
 ## Climbing Stairs
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/3f2e2cc3-1cc5-473e-92b8-13c87e884bf2)
+
 
 ## min cost climbing stairs
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/8d357bd3-5609-4af0-829b-c63d76784e6e)
