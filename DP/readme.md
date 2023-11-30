@@ -24,6 +24,9 @@
 
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/dc3cdb97-b5dc-4f99-ac70-a59a464c5324)
 
+## Decode Ways
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/6382175f-64f4-45d0-92f3-505d79b140ad)
+
 
 
 
