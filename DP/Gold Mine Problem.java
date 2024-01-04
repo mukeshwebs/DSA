@@ -5,7 +5,6 @@ Time Complexity: O(n * m)
 Space Complexity: O(n * m)
 */
 
-Note : test case failing : 1097 /
 start mining from the last col and for last col value will be as it is and in last 2nd col for top row and most bottom row it can travel forward and \(top)  /(bottom)
 and for anywhere in between it can travel in 3 direction so everytime to get the max gold we will pick max of all possible movement and then add with the current values.
 
