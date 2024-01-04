@@ -17,6 +17,15 @@ class Solution {
         int row = arr.length;
         int col = arr[0].length;
         int[][] dp = new int[row][col];
+        
+        //base case 
+        if(n==1){
+            int sum = 0;
+            for(int j = 0; j < m; j++){
+                sum+=arr[0][j];
+            }
+            return sum;
+        }
 
         for (int j = arr[0].length - 1; j >= 0; j--) {
             for (int i = arr.length - 1; i >= 0; i--) {
@@ -48,3 +57,6 @@ class Solution {
         return max;
     }
 }
+
+
+
