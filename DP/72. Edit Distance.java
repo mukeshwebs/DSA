@@ -1,5 +1,21 @@
 https://leetcode.com/problems/edit-distance/description/
 
+/*
+Example 1:
+
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+*/
+
+TC: O(3^(n+m), The time complexity of the code is exponential because the recursive function explores all 
+    possible combinations of insert, delete, and replace operations. 
+SC: O(nm)
+
+----------------------------------------------------------------------------------------------------------------
 //with comments 
 class Solution {
     public int minDistanceHelper(String word1, String word2, int n , int m, int[][]dp) {
