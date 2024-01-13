@@ -28,6 +28,16 @@
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/6382175f-64f4-45d0-92f3-505d79b140ad)
 
 
+## Distinct Subsequences
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/f2d74063-4f70-4c03-bab5-1c9252ad43d3)
+
+## Edit Distance
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/8144eb06-59ac-4f2e-900b-7ad9d39b64bb)
+
+
+
+
+
 
 
 
