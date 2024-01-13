@@ -29,7 +29,15 @@ class Solution {
         if (dp[n][m] != -1) {
             return dp[n][m];
         }
+        
+/*
 
+1 + longestCommonSubsequenceHelper(text1, text2, n - 1, m - 1, dp); // include current character
+
+This condition checks if the last characters of both strings X and Y are equal. If they are, 
+it implies that you have found a common element in the LCS. By adding +1, you are incrementing the length of the LCS by 1.
+*/        
+        
         if (text1.charAt(n - 1) == text2.charAt(m - 1)) {
             return dp[n][m] = 1 + longestCommonSubsequenceHelper(text1, text2, n - 1, m - 1, dp); // include current character
         } else {
