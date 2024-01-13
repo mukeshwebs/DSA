@@ -25,7 +25,11 @@ class Solution {
         }
         // check if the values at the current indices are equal
         if (nums1[n - 1] == nums2[m - 1]) {
-            return dp[n][m] = 1 + maxUncrossedLinesHelper(nums1, nums2, n - 1, m - 1, dp);
+
+            /*it implies that you have found a pair of elements that can be part of an uncrossed line. 
+            By adding +1, you are incrementing the count of uncrossed lines by 1.*/
+            
+            return dp[n][m] = 1 + maxUncrossedLinesHelper(nums1, nums2, n - 1, m - 1, dp); /
         } else {
             // make two recursive calls
             int option1 = maxUncrossedLinesHelper(nums1, nums2, n - 1, m, dp);
