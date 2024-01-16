@@ -41,6 +41,7 @@ it implies that you have found a common element in the LCS. By adding +1, you ar
         if (text1.charAt(n - 1) == text2.charAt(m - 1)) {
             return dp[n][m] = 1 + longestCommonSubsequenceHelper(text1, text2, n - 1, m - 1, dp); // include current character
         } else {
+            //
             return dp[n][m] = Math.max(longestCommonSubsequenceHelper(text1, text2, n - 1, m, dp),
                     longestCommonSubsequenceHelper(text1, text2, n, m - 1, dp));
         }
