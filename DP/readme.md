@@ -35,6 +35,18 @@
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/8144eb06-59ac-4f2e-900b-7ad9d39b64bb)
 
 
+## 1035. Uncrossed Lines
+## 1458. Max Dot Product of Two Subsequences
+## 5. Longest Palindromic Substring
+## 583. Delete Operation for Two Strings
+## Longest common substring
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/f3a7ad2c-a667-487a-bf56-81e943d57b6d)
+```
+In this image diagonally we can see the pattern is formed and substring "abcd" is the longest substring formed in this 
+```
+
+## 132. Palindrome Partitioning II
+
 
 
 
