@@ -1,5 +1,7 @@
 https://leetcode.com/problems/longest-increasing-subsequence/description/
 
+//Memoization
+
 class Solution {
     public int lengthOfLIS(int[] nums) {
         int maxLength = 0;
@@ -24,3 +26,7 @@ class Solution {
         return maxLen;
     }
 }
+
+//Tabulation
+
+
