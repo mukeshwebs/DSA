@@ -3,12 +3,15 @@ https://leetcode.com/problems/longest-increasing-subsequence/description/
 //Memoization
 
 Logic: LIS  - Longest increasing subsequence 
-    The approach used is straight forward, [10,9,2,5,3,7,101,18]
-    for every index waha tk ke increase subseuqneces find kr rhe hai 
-    ex: from the lengthOfLIS we are passing i 
-    intialliy i = 101
-    so in LIS_memo it will check the inceasing subseuneces till 101 so similarly 
-    we are finding the lis at each index and maitaining the maximum.
+/*
+Appraoch:
+
+The LIS_memo function is a recursive function that calculates the length of the longest increasing subsequence ending at index ei.
+It recursively calls itself for smaller indices, checking if the element at index ei can be added to the increasing subsequence starting from i.
+*/
+
+    TC:  O(n^2)
+    SC: O(n)
 
 class Solution {
     public int lengthOfLIS(int[] nums) {
@@ -35,9 +38,20 @@ class Solution {
     }
 }
 
-//Tabulation
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-//tabulation
+    //Tabulation Approach
+    
+    TC:  O(n^2)
+    SC: O(n)
+
+/*
+Appraoch:
+
+It compares each element nums[i] with previous elements nums[j] (where j < i) to determine if nums[i] can be part of a longer increasing subsequence.
+If nums[i] is greater than nums[j], it updates dp[i] to be the maximum between its current value and the length of the subsequence ending at j plus one.
+*/
+
 class Solution {
     public int lengthOfLIS(int[] nums) {
         int n = nums.length;
