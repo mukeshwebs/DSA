@@ -38,6 +38,8 @@
 ## 1035. Uncrossed Lines
 ## 1458. Max Dot Product of Two Subsequences
 ## 5. Longest Palindromic Substring
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/a7298088-1a3b-439e-bfb6-a900be0dfba1)
+
 ## 583. Delete Operation for Two Strings
 ## Longest common substring
 ![image](https://github.com/mukeshwebs/DSA/assets/53649320/f3a7ad2c-a667-487a-bf56-81e943d57b6d)
