@@ -49,6 +49,10 @@ In this image diagonally we can see the pattern is formed and substring "abcd" i
 
 ## 132. Palindrome Partitioning II
 
+## 0 - 1 Knapsack Problem
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/d19a1ef8-d14f-4c63-9308-77f7f23bf0ba)
+
+
 
 
 
