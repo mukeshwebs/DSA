@@ -22,50 +22,45 @@ The memoization table dp has dimensions (n + 1) x (m + 1). Therefore, the space 
 
 
 //memoization
-  
 class Solution {
     public int numDistinct(String s, String t) {
         int n = s.length();
         int m = t.length();
-        int[][] dp = new int[n + 1][m + 1];
-
-        // Initializing the dp array with -1
-        for (int i = 0; i <= n; i++) {
-            Arrays.fill(dp[i], -1);
+        int [][]dp = new int[n+1][m+1];
+        for(int []d: dp){
+            Arrays.fill(d, -1);
         }
-
-        return numDistinct_memo(s, t, n, m, dp);
+        return numDistinct_dp(s, t, n, m, dp);
     }
 
-    public int numDistinct_memo(String s, String t, int n, int m, int[][] dp) {
-        // base case
-        if (m == 0) {
-            dp[n][m] = 1; // empty string is always a subsequence
+    public int numDistinct_dp(String s, String t, int n, int m, int[][]dp){
+        //base case 
+        if(m==0){
+            return dp[n][m] = 1;
+        }
+        if(n<m) return dp[n][m] = 0;
+
+        //memo
+        if(dp[n][m]!=-1){
             return dp[n][m];
         }
 
-        if (n == 0) {
-            dp[n][m] = 0; // non-empty string can't be a subsequence of an empty string
-            return dp[n][m];
-        }
+        //if both the character matches then their can 2 possibiities 
+        /*
+        rabbbit/rabbit - > abbbit/abbit : find rem 'abbit' in the string s
+        another possiblity is to find the t in the string s from the next index 
+        bcz we can find the complete t in s after both has same chars
 
-        // check memoization table
-        if (dp[n][m] != -1) {
-            return dp[n][m];
-        }
+        rabbbit/rabbit ->  abbbit/rabbit
 
-        // two recursive calls
-        if (s.charAt(n - 1) == t.charAt(m - 1)) {
-            int a = numDistinct_memo(s, t, n - 1, m - 1, dp);
-            int b = numDistinct_memo(s, t, n - 1, m, dp);
-            dp[n][m] = a + b;
-        } else {
-            // when characters are not equal, exclude the character from the first string
-            dp[n][m] = numDistinct_memo(s, t, n - 1, m, dp);
-        }
-        return dp[n][m];
+        */
+        if(s.charAt(n-1)==t.charAt(m-1)){
+            int a = numDistinct_dp(s, t,n-1, m-1, dp);
+            int b = numDistinct_dp(s, t,n-1, m, dp);
+            return dp[n][m] = a+b;
+        }else{
+            int b = numDistinct_dp(s, t,n-1, m, dp);
+            return dp[n][m] = b;
+      }
     }
 }
-
-
-//Tabulation
