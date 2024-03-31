@@ -41,6 +41,8 @@ class Solution {
                     dp[tar] = Math.min(dp[tar - ele] + 1, dp[tar]);
             }
         }
+        //if dp is unchanged for the target val means target value cannot be acheived 
+        //so return -1, if it's value is changed then return (int) 1e9
         return dp[Tar] != (int) 1e9 ? dp[Tar] : -1;
     }
 }
