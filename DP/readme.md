@@ -58,6 +58,9 @@ In this image diagonally we can see the pattern is formed and substring "abcd" i
  - we will fill that cell with the prev val
 ```
 
+## 45. Jump Game II
+![image](https://github.com/mukeshwebs/DSA/assets/53649320/545933ce-7f45-4dec-a29f-9f8eaf2f455b)
+
 
 
 
