@@ -1,6 +1,6 @@
 https://leetcode.com/problems/climbing-stairs/
 
-//recursion 
+//recursion_
 
     public int climbStairsHelper(int n, int idx) {
         if (idx == n) { // if we reach to the last index, we found 1 ways
