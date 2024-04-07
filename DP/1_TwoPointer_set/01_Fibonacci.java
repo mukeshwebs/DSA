@@ -3,12 +3,10 @@ class Solution {
     public int fib(int n) {
         return fib_rec(n);
     }
-
     public int fib_rec(int n) {
         if (n == 0 || n == 1) {
             return n;
         }
-
         int rec = fib_rec(n - 1) + fib_rec(n - 2);
         return rec;
     }
@@ -31,11 +29,9 @@ class Solution {
         if (n == 0 || n == 1) {
             dp[n] = n;
         }
-
         if (dp[n] != -1) {
             return dp[n];
         }
-
         int rec = fib_memo(n - 1, dp) + fib_memo(n - 2, dp);
         dp[n] = rec;
         return rec;
@@ -54,7 +50,6 @@ public static int fibo_tabu(int N, int[] dp) {
             dp[n] = n;
             continue;
         }
-
         int ans = dp[n - 1] + dp[n - 2];// fibo_memo(n - 1, dp) + fibo_memo(n - 2, dp);
         dp[n] = ans;
     }
