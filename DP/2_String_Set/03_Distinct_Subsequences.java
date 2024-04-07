@@ -24,43 +24,49 @@ The memoization table dp has dimensions (n + 1) x (m + 1). Therefore, the space 
 //memoization
 class Solution {
     public int numDistinct(String s, String t) {
-        int n = s.length();
-        int m = t.length();
-        int [][]dp = new int[n+1][m+1];
+        int n = s.length(); // String s ki length
+        int m = t.length(); // String t ki length
+        int [][]dp = new int[n+1][m+1]; // 2D array dp jisme hum store karenge subproblems ka solution
         for(int []d: dp){
-            Arrays.fill(d, -1);
+            Arrays.fill(d, -1); // dp array ko -1 se fill karo initially
         }
-        return numDistinct_dp(s, t, n, m, dp);
+        return numDistinct_dp(s, t, n, m, dp); // numDistinct_dp function ko call karo
     }
 
     public int numDistinct_dp(String s, String t, int n, int m, int[][]dp){
-        //base case 
+        // Base case
         if(m==0){
-            return dp[n][m] = 1;
+            return dp[n][m] = 1; // agar t ki length 0 hai toh ek hi tarika hai, khud ko select karo
         }
-        if(n<m) return dp[n][m] = 0;
+        if(n<m) return dp[n][m] = 0; // agar s ki length t se choti hai toh koi subsequence nahi ban sakta
 
-        //memo
+        // Memoization
         if(dp[n][m]!=-1){
-            return dp[n][m];
+            return dp[n][m]; // agar subproblem solve ho chuka hai toh uska solution return karo
         }
 
-        //if both the character matches then their can 2 possibiities 
+        // Agar dono character match karte hain toh do possibilities hain
         /*
-        rabbbit/rabbit - > abbbit/abbit : find rem 'abbit' in the string s
-        another possiblity is to find the t in the string s from the next index 
-        bcz we can find the complete t in s after both has same chars
+        rabbbit/rabbit - > abbbit/abbit : aage se 'abbit' ko string s mei find karenge
+        doosri possibility hai t ko next index se string s mei find karna
+        Kyunki aisa bhi ho sakta hai ki next index se mil jaye.
 
         rabbbit/rabbit ->  abbbit/rabbit
 
         */
         if(s.charAt(n-1)==t.charAt(m-1)){
-            int a = numDistinct_dp(s, t,n-1, m-1, dp);
-            int b = numDistinct_dp(s, t,n-1, m, dp);
-            return dp[n][m] = a+b;
+            int a = numDistinct_dp(s, t,n-1, m-1, dp); // match ho gaya toh dono ko aage badha ke check kro
+            int b = numDistinct_dp(s, t,n-1, m, dp); // agr match hua to ek possibislities hai ki t ki string s me current char ke baad bhi mil skti hai
+            //ex : s = abgbag, t =bag
+            /*
+             rec call a -> bgbag/ag -> ag ko s me search kro
+             rec call b->  bgbag/bag -> t s me next index se bhi khi mil skti hai to wi possibility explore kro
+             */
+            return dp[n][m] = a+b; // dono possibilities ka sum return karo
         }else{
-            int b = numDistinct_dp(s, t,n-1, m, dp);
-            return dp[n][m] = b;
-      }
+            int b = numDistinct_dp(s, t,n-1, m, dp); // agar character match nahi hua toh next index se t ko find karne ke liye recursive call karo
+            return dp[n][m] = b; // sirf ek hi possibility hai is case mei
+        }
     }
 }
+
