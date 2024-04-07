@@ -28,8 +28,8 @@ direction array is used -> define dir array with the possible direction in which
         int[][] dp = new int[er + 1][ec + 1];
 
         int[][] dir = { { 1, 0 }, { 0, 1 }, { 1, 1 } }; //possible direction of jumps
-        //Note: think the movement in terms of x and y in matrix -
         /*
+        Note: think the movement in terms of x and y in matrix -
         say if right movement is there then in matrix -> row = remain same, col = it will change
         down -> row = it will update, col= will remain same
          */
