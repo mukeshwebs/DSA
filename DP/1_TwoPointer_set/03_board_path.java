@@ -15,7 +15,6 @@ Given A board and dice, count the number of ways in which thrown dice can reach 
         for (int dice = 1; dice <= 6 && sp + dice <= ep; dice++) {
             count += boardPath_memo(sp + dice, ep, dp);
         }
-
         return dp[sp] = count;
     }
 
