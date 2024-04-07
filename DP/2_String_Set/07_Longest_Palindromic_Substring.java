@@ -1,5 +1,8 @@
 https://leetcode.com/problems/longest-palindromic-substring/
 
+TC: O(n)^2
+SC: O(n)^2
+
 class Solution {
     public String longestPalindrome(String s) {
         int si = 0; // Starting index of the longest palindrome substring
