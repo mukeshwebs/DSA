@@ -14,6 +14,11 @@ Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
 
           */
 
+//important helper function used
+1.KDown
+2.nodeToRootPath
+3. traverse on node to root path and block nodes
+
 //without comments 
 class Solution {
      boolean nodeToRootPath_(TreeNode root, int data, ArrayList<TreeNode> ans) {
