@@ -1,7 +1,25 @@
 https://www.geeksforgeeks.org/problems/size-of-binary-tree/1
+/*
+//problem statement
+Example 2:
+Input:
+10 5 9 N 1 3 6 
+Output:
+6
+Explanation:
+Given Tree is :
+                              10
+                             /  \
+                           5     9
+                            \    / \
+                             1 3   6
+There are 6 nodes in the tree.
+
+*/
 
 TC: O(n)
 SC: O(1)
+
 
 Note: size is no. of nodes in the binary tree
      O
