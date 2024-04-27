@@ -12,6 +12,9 @@ It recursively calls itself for smaller indices, checking if the element at inde
 
     TC:  O(n^2)
     SC: O(n)
+    //2nd approach is better
+
+    //1st Approach
 
 class Solution {
     public int lengthOfLIS(int[] nums) {
@@ -40,6 +43,7 @@ class Solution {
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+    //2nd Approach
     //Tabulation Approach
     
     TC:  O(n^2)
