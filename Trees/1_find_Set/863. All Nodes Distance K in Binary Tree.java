@@ -133,3 +133,29 @@ Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
         kdown(root.right, k - 1, block, ans);
     }   
 }
+
+---------------------------------------------------------------------------------------------
+//alternative in place of nodeTorootpath without using space
+
+     public int distanceK(TreeNode root, TreeNode target, int k, List<Integer> ans) {
+        if (root == null)
+            return -1;
+
+        if (root == target) {
+            kdown(root, k, null, ans);
+            return 1;                           //mere se leke mere parent tk ka distance kitna hai? that is 1
+        }
+
+        int ld = distanceK(root.left, target, k, ans);
+        if (ld != -1) {              //iska mtlb left se ans mila hai
+            kdown(root, k - ld, root.left, ans);    
+            return ld + 1;                                   //left wali node se leke iske parent tk ka distance ld jitna +1
+        }
+
+        int rd = distanceK(root.right, target, k, ans);
+        if (rd != -1) {                   //iska mtlb right se ans mila hai
+            kdown(root, k - rd, root.right, ans);
+            return rd + 1;                                  //right wali node se leke iske parent tk ka distance rd jitna +1
+        }
+        return -1;
+    }       
