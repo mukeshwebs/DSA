@@ -45,3 +45,28 @@ class Solution {
         return false;
     }
 }
+
+----------------------------------------
+  //optimised - TC: O(n), SC: O(1)
+  class Solution {
+    TreeNode LCANode = null;
+    public boolean lowestCommonAncestorHelper(TreeNode root, TreeNode p, TreeNode q) {
+        if(root==null) return false;
+        boolean selfPresent = root==p || root==q;
+
+        boolean leftPresent = lowestCommonAncestorHelper(root.left, p, q);
+        boolean rightPresent = lowestCommonAncestorHelper(root.right, p, q);
+        /*
+        case1: (leftPresent && rightPresent) : if leftside is true and rightside is true means root is the LCA
+        case2: if leftside node is found and current node is present then root and vice versa
+        */
+        if((leftPresent && rightPresent) || (leftPresent && selfPresent) || (selfPresent && rightPresent)){
+            LCANode = root;
+        }
+        return leftPresent||rightPresent||selfPresent;
+    }    
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        lowestCommonAncestorHelper(root, p, q);
+        return LCANode;
+    }
+}
