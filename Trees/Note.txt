@@ -1,1 +1,7 @@
 
+String str = "123";
+int intValue = Integer.parseInt(str);
+
+
+int intValue = 123;
+String str = String.valueOf(intValue);
