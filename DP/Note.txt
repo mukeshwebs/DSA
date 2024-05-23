@@ -1,1 +1,12 @@
+------------------------------------------------------
+## 1
 
+while solving rec n backtracking String problems:
+
+2 possible ways are there->
+1: either reduce the original string by using substring
+qsf: questions so far 
+asf: answer so far
+
+2: either use the index and increase the index
+------------------------------------------------------
